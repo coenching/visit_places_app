@@ -3,7 +3,7 @@ Dream Places is about not having regrets. The world is beautiful and full of ama
 
 Dream Places helps you do just that.
 
-Dream Places helps you create their perfect trips or vacations. With recommendations from friends, you get advice from friends who have been there done that. Your trip is built on advice that you can trust, ensuring the most awesome trip experience.
+Dream Places helps you create your perfect trips or vacations. Or a weekend getaway, a road trip, or just a coffee date or a night out with your friends, you can do so simply on the platform. With recommendations from friends, you get advice from friends who have been there done that. Your trip is built on advice that you can trust, ensuring the most awesome trip experience.
 
 
 Heroku link:
