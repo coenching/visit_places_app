@@ -83,6 +83,11 @@ class PlacesController < ApplicationController
 
 	def show
 		@place = Place.find(params[:id])
+		ids = []
+		current_user.friendships.each do |friendship|
+			ids << friendship.friend_id
+		end
+		@visits = Visit.where(place_id: params[:id], user_id: ids).order('date DESC')
 	end
 
 	private

@@ -1,6 +1,9 @@
-<h1>Place</h1>
+<h1>Favorite Place</h1>
 
 <%= render partial: "place", object: @place, as: 'place' %>
 
-<%= link_to 'Back', favorites_path , class:"btn btn-default"%>
+<% @visits.each do |visit| %>
+	<%= render partial: "visits/visit", object: visit, as: 'visit' %>
+<% end %>
 
+<%= link_to 'Back', favorites_path , class:"btn btn-default"%>
