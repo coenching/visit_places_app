@@ -15,3 +15,6 @@
 /log/*.log
 /tmp
 /public/uploads/
+
+# Ignore the env variables
+/config/local_env.yml

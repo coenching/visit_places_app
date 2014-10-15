@@ -2,9 +2,9 @@
 <html>
 <head>
   <title>VisitPlacesApp</title>
-  <script type="text/javascript"
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMjQW_pHVa_SJleQQX2BC51pJ4UyhVbK0">
-	</script>
+  <%= include_gon %>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=" + ENV['GOOGLE_MAP_API_KEY']></script>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>

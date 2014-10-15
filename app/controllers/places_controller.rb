@@ -48,6 +48,7 @@ class PlacesController < ApplicationController
 		@place.address = params[:address] if params[:address]
 		@place.lat = params[:lat] if params[:lat]
 		@place.lng = params[:lng] if params[:lng]
+		gon.googleMapApiKey = ENV['GOOGLE_MAP_API_KEY']
 	end
 
 	def create
@@ -62,6 +63,7 @@ class PlacesController < ApplicationController
 
 	def edit
 		@place = Place.find(params[:id])
+		gon.googleMapApiKey = ENV['GOOGLE_MAP_API_KEY']
 	end
 
 	def update
@@ -101,7 +103,8 @@ class PlacesController < ApplicationController
 			return []
 		end
 		address = criteria.gsub(' ','%20')
-		data = Typhoeus.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyBMjQW_pHVa_SJleQQX2BC51pJ4UyhVbK0")
+
+		data = Typhoeus.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + ENV['GOOGLE_MAP_API_KEY'])
 		# puts data
 		data = JSON.parse(data.body)
 		if data['status'] == 'OK'

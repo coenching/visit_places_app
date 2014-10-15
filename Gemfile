@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'rails_12factor', group: :production
 
 gem 'carrierwave'
-
 gem 'mini_magick', '~> 3.8.1'
+gem 'fog'
 
 gem 'devise'
 
@@ -51,3 +51,5 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Gon gem for including ENV variables in js file
+gem 'gon'

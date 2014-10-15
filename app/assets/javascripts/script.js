@@ -1,3 +1,4 @@
+
 function initialize() {
 
   	var place_lat = parseFloat($('#place_lat').val());
@@ -54,7 +55,7 @@ function initialize() {
     	$('#pin_map').click(function(e){
     		e.preventDefault();
     	  	var address = $('#place_address').val();
-    	  	var geo_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyBMjQW_pHVa_SJleQQX2BC51pJ4UyhVbK0"
+    	  	var geo_url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + gon.googleMapApiKey;
     	  	
           var request = $.ajax({
     	  		url: geo_url,
