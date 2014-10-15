@@ -88,4 +88,12 @@ ActiveRecord::Schema.define(version: 20141009190600) do
   add_index "visits", ["place_id"], name: "index_visits_on_place_id", using: :btree
   add_index "visits", ["user_id"], name: "index_visits_on_user_id", using: :btree
 
+  create_table "widgets", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
