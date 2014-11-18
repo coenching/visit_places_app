@@ -207,6 +207,7 @@ function addToFavorites(e){
     request.done(function(data){
       $(e.target).addClass("glyphicon-heart");
       $(e.target).removeClass("glyphicon-heart-empty");
+      $(e.target).unbind("click");
       $(e.target).click(removeFromFavorites);
     });
 }
@@ -229,6 +230,7 @@ function removeFromFavorites(e){
     request.done(function(data){
       $(e.target).removeClass("glyphicon-heart");
       $(e.target).addClass("glyphicon-heart-empty");
+      $(e.target).unbind("click");
       $(e.target).click(addToFavorites);
     });
 }
